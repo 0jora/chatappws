@@ -2,7 +2,7 @@
 import React from "react";
 
 const MainPage = () => {
-  
+
           return (
             <div>
                
@@ -22,13 +22,13 @@ const MainPage = () => {
   <nav>
       <ul>
           <li>
-              <a onClick={this.props.history.push('/404')} title="">
+              <a href="index.html" title="">
                   <span><img src="../public/Assets/images/icon1.png" alt=""/></span>
                   Home
               </a>
           </li>
           <li>
-              <a  title="">
+              <a onClick={()=>{context.history.push('/404')}} title="">
                   <span><img src="../public/Assets/images/icon2.png" alt=""/></span>
                   Companies
               </a>
