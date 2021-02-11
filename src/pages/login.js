@@ -4,49 +4,49 @@ const LoginPage = () => {
 
           return (
             <div>
-              <body class="sign-in">
-              	<div class="wrapper">
+              <body className="sign-in">
+              	<div className="wrapper">
 		
 
-		<div class="sign-in-page">
-			<div class="signin-popup">
-				<div class="signin-pop">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="cmp-info">
-								<div class="cm-logo">
+		<div className="sign-in-page">
+			<div className="signin-popup">
+				<div className="signin-pop">
+					<div className="row">
+						<div className="col-lg-6">
+							<div className="cmp-info">
+								<div className="cm-logo">
 									<img src="Assets/images/cm-logo.png" alt=""/>
 									<p>Workwise,  is a global freelancing platform and social networking where businesses and independent professionals connect and collaborate remotely</p>
 								</div>
 								<img src="Assets/images/cm-main-img.png" alt=""/>			
 							</div>
 						</div>
-						<div class="col-lg-6">
-							<div class="login-sec">
-								<ul class="sign-control">
-									<li data-tab="tab-1" class="current"><a href="#" title="">Sign in</a></li>				
+						<div className="col-lg-6">
+							<div className="login-sec">
+								<ul className="sign-control">
+									<li data-tab="tab-1" className="current"><a href="#" title="">Sign in</a></li>
 									<li data-tab="tab-2"><a href="#" title="">Sign up</a></li>				
 								</ul>			
-								<div class="sign_in_sec current" id="tab-1">
+								<div className="sign_in_sec current" id="tab-1">
 									
 									<h3>Sign in</h3>
 									<form>
-										<div class="row">
-											<div class="col-lg-12 no-pdd">
-												<div class="sn-field">
+										<div className="row">
+											<div className="col-lg-12 no-pdd">
+												<div className="sn-field">
 													<input type="text" name="username" placeholder="Username"/>
-													<i class="la la-user"></i>
+													<i className="la la-user"></i>
 												</div>
 											</div>
-											<div class="col-lg-12 no-pdd">
-												<div class="sn-field">
+											<div className="col-lg-12 no-pdd">
+												<div className="sn-field">
 													<input type="password" name="password" placeholder="Password"/>
-													<i class="la la-lock"></i>
+													<i className="la la-lock"></i>
 												</div>
 											</div>
-											<div class="col-lg-12 no-pdd">
-												<div class="checky-sec">
-													<div class="fgt-sec">
+											<div className="col-lg-12 no-pdd">
+												<div className="checky-sec">
+													<div className="fgt-sec">
 														<input type="checkbox" name="cc" id="c1"/>
 														<label for="c1">
 															<span></span>
@@ -56,67 +56,67 @@ const LoginPage = () => {
 													<a href="#" title="">Forgot Password?</a>
 												</div>
 											</div>
-											<div class="col-lg-12 no-pdd">
+											<div className="col-lg-12 no-pdd">
 												<button type="submit" value="submit">Sign in</button>
 											</div>
 										</div>
 									</form>
-									<div class="login-resources">
+									<div className="login-resources">
 										<h4>Login Via Social Account</h4>
 										<ul>
-											<li><a href="#" title="" class="fb"><i class="fa fa-facebook"></i>Login Via Facebook</a></li>
-											<li><a href="#" title="" class="tw"><i class="fa fa-twitter"></i>Login Via Twitter</a></li>
+											<li><a href="#" title="" className="fb"><i className="fa fa-facebook"></i>Login Via Facebook</a></li>
+											<li><a href="#" title="" className="tw"><i className="fa fa-twitter"></i>Login Via Twitter</a></li>
 										</ul>
 									</div>
 								</div>
-								<div class="sign_in_sec" id="tab-2">
-									<div class="signup-tab">
-										<i class="fa fa-long-arrow-left"></i>
+								<div className="sign_in_sec" id="tab-2">
+									<div className="signup-tab">
+										<i className="fa fa-long-arrow-left"></i>
 										<h2>johndoe@example.com</h2>
 										<ul>
-											<li data-tab="tab-3" class="current"><a href="#" title="">User</a></li>
+											<li data-tab="tab-3" className="current"><a href="#" title="">User</a></li>
 											<li data-tab="tab-4"><a href="#" title="">Company</a></li>
 										</ul>
 									</div>
-									<div class="dff-tab current" id="tab-3">
+									<div className="dff-tab current" id="tab-3">
 										<form>
-											<div class="row">
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
+											<div className="row">
+												<div className="col-lg-12 no-pdd">
+													<div className="sn-field">
 														<input type="text" name="name" placeholder="Full Name"/>
-														<i class="la la-user"></i>
+														<i className="la la-user"></i>
 													</div>
 												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
+												<div className="col-lg-12 no-pdd">
+													<div className="sn-field">
 														<input type="text" name="country" placeholder="Country"/>
-														<i class="la la-globe"></i>
+														<i className="la la-globe"></i>
 													</div>
 												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
+												<div className="col-lg-12 no-pdd">
+													<div className="sn-field">
 														<select>
 															<option>Category</option>
 														</select>
-														<i class="la la-dropbox"></i>
-														<span><i class="fa fa-ellipsis-h"></i></span>
+														<i className="la la-dropbox"></i>
+														<span><i className="fa fa-ellipsis-h"></i></span>
 													</div>
 												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
+												<div className="col-lg-12 no-pdd">
+													<div className="sn-field">
 														<input type="password" name="password" placeholder="Password"/>
-														<i class="la la-lock"></i>
+														<i className="la la-lock"></i>
 													</div>
 												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
+												<div className="col-lg-12 no-pdd">
+													<div className="sn-field">
 														<input type="password" name="repeat-password" placeholder="Repeat Password"/>
-														<i class="la la-lock"></i>
+														<i className="la la-lock"></i>
 													</div>
 												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="checky-sec st2">
-														<div class="fgt-sec">
+												<div className="col-lg-12 no-pdd">
+													<div className="checky-sec st2">
+														<div className="fgt-sec">
 															<input type="checkbox" name="cc" id="c2"/>
 															<label for="c2">
 																<span></span>
@@ -125,51 +125,51 @@ const LoginPage = () => {
 														</div>
 													</div>
 												</div>
-												<div class="col-lg-12 no-pdd">
+												<div className="col-lg-12 no-pdd">
 													<button type="submit" value="submit">Get Started</button>
 												</div>
 											</div>
 										</form>
 									</div>
-									<div class="dff-tab" id="tab-4">
+									<div className="dff-tab" id="tab-4">
 									<form>
-											<div class="row">
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
+											<div className="row">
+												<div className="col-lg-12 no-pdd">
+													<div className="sn-field">
 														<input type="text" name="name" placeholder="Full Name"/>
-														<i class="la la-user"></i>
+														<i className="la la-user"></i>
 													</div>
 												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
+												<div className="col-lg-12 no-pdd">
+													<div className="sn-field">
 														<input type="text" name="country" placeholder="Country"/>
-														<i class="la la-globe"></i>
+														<i className="la la-globe"></i>
 													</div>
 												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
+												<div className="col-lg-12 no-pdd">
+													<div className="sn-field">
 														<select>
 															<option>Category</option>
 														</select>
-														<i class="la la-dropbox"></i>
-														<span><i class="fa fa-ellipsis-h"></i></span>
+														<i className="la la-dropbox"></i>
+														<span><i className="fa fa-ellipsis-h"></i></span>
 													</div>
 												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
+												<div className="col-lg-12 no-pdd">
+													<div className="sn-field">
 														<input type="password" name="password" placeholder="Password"/>
-														<i class="la la-lock"></i>
+														<i className="la la-lock"></i>
 													</div>
 												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
+												<div className="col-lg-12 no-pdd">
+													<div className="sn-field">
 														<input type="password" name="repeat-password" placeholder="Repeat Password"/>
-														<i class="la la-lock"></i>
+														<i className="la la-lock"></i>
 													</div>
 												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="checky-sec st2">
-														<div class="fgt-sec">
+												<div className="col-lg-12 no-pdd">
+													<div className="checky-sec st2">
+														<div className="fgt-sec">
 															<input type="checkbox" name="cc" id="c2"/>
 															<label for="c2">
 																<span></span>
@@ -178,7 +178,7 @@ const LoginPage = () => {
 														</div>
 													</div>
 												</div>
-												<div class="col-lg-12 no-pdd">
+												<div className="col-lg-12 no-pdd">
 													<button type="submit" value="submit">Get Started</button>
 												</div>
 											</div>
@@ -190,8 +190,8 @@ const LoginPage = () => {
 					</div>		
 				</div>
 			</div>
-			<div class="footy-sec">
-				<div class="container">
+			<div className="footy-sec">
+				<div className="container">
 					<ul>
 						<li><a href="#" title="">Help Center</a></li>
 						<li><a href="#" title="">Privacy Policy</a></li>

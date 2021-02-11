@@ -9,25 +9,25 @@ function Body() {
               
             <div>
 <main>
-<div class="main-section">
-<div class="container">
-  <div class="main-section-data">
-      <div class="row">
-          <div class="col-lg-3 col-md-4 pd-left-none no-pd">
-              <div class="main-left-sidebar no-margin">
-                  <div class="user-data full-width">
-                      <div class="user-profile">
-                          <div class="username-dt">
-                              <div class="usr-pic">
+<div className="main-section">
+<div className="container">
+  <div className="main-section-data">
+      <div className="row">
+          <div className="col-lg-3 col-md-4 pd-left-none no-pd">
+              <div className="main-left-sidebar no-margin">
+                  <div className="user-data full-width">
+                      <div className="user-profile">
+                          <div className="username-dt">
+                              <div className="usr-pic">
                                   <img src="http://via.placeholder.com/100x100" alt=""/>
                               </div>
                           </div>
-                          <div class="user-specs">
+                          <div className="user-specs">
                               <h3>John Doe</h3>
                               <span>Graphic Designer at Self Employed</span>
                           </div>
                       </div>
-                      <ul class="user-fw-status">
+                      <ul className="user-fw-status">
                           <li>
                               <h4>Following</h4>
                               <span>34</span>
@@ -43,66 +43,66 @@ function Body() {
                           </Link>
                       </ul>
                   </div>
-                  <div class="suggestions full-width">
-                      <div class="sd-title">
+                  <div className="suggestions full-width">
+                      <div className="sd-title">
                           <h3>Suggestions</h3>
-                          <i class="la la-ellipsis-v"></i>
+                          <i className="la la-ellipsis-v"></i>
                       </div>
-                      <div class="suggestions-list">
-                          <div class="suggestion-usd">
+                      <div className="suggestions-list">
+                          <div className="suggestion-usd">
                               <img src="http://via.placeholder.com/35x35" alt=""/>
-                              <div class="sgt-text">
+                              <div className="sgt-text">
                                   <h4>Jessica William</h4>
                                   <span>Graphic Designer</span>
                               </div>
-                              <span><i class="la la-plus"></i></span>
+                              <span><i className="la la-plus"></i></span>
                           </div>
-                          <div class="suggestion-usd">
+                          <div className="suggestion-usd">
                               <img src="http://via.placeholder.com/35x35" alt=""/>
-                              <div class="sgt-text">
+                              <div className="sgt-text">
                                   <h4>John Doe</h4>
                                   <span>PHP Developer</span>
                               </div>
-                              <span><i class="la la-plus"></i></span>
+                              <span><i className="la la-plus"></i></span>
                           </div>
-                          <div class="suggestion-usd">
+                          <div className="suggestion-usd">
                               <img src="http://via.placeholder.com/35x35" alt=""/>
-                              <div class="sgt-text">
+                              <div className="sgt-text">
                                   <h4>Poonam</h4>
                                   <span>Wordpress Developer</span>
                               </div>
-                              <span><i class="la la-plus"></i></span>
+                              <span><i className="la la-plus"></i></span>
                           </div>
-                          <div class="suggestion-usd">
+                          <div className="suggestion-usd">
                               <img src="http://via.placeholder.com/35x35" alt=""/>
-                              <div class="sgt-text">
+                              <div className="sgt-text">
                                   <h4>Bill Gates</h4>
                                   <span>C & C++ Developer</span>
                               </div>
-                              <span><i class="la la-plus"></i></span>
+                              <span><i className="la la-plus"></i></span>
                           </div>
-                          <div class="suggestion-usd">
+                          <div className="suggestion-usd">
                               <img src="http://via.placeholder.com/35x35" alt=""/>
-                              <div class="sgt-text">
+                              <div className="sgt-text">
                                   <h4>Jessica William</h4>
                                   <span>Graphic Designer</span>
                               </div>
-                              <span><i class="la la-plus"></i></span>
+                              <span><i className="la la-plus"></i></span>
                           </div>
-                          <div class="suggestion-usd">
+                          <div className="suggestion-usd">
                               <img src="http://via.placeholder.com/35x35" alt=""/>
-                              <div class="sgt-text">
+                              <div className="sgt-text">
                                   <h4>John Doe</h4>
                                   <span>PHP Developer</span>
                               </div>
-                              <span><i class="la la-plus"></i></span>
+                              <span><i className="la la-plus"></i></span>
                           </div>
-                          <div class="view-more">
+                          <div className="view-more">
                               <a href="#" title="">View More</a>
                           </div>
                       </div>
                   </div>
-                  <div class="tags-sec full-width">
+                  <div className="tags-sec full-width">
                       <ul>
                           <li><a href="#" title="">Help Center</a></li>
                           <li><a href="#" title="">About</a></li>
@@ -113,27 +113,27 @@ function Body() {
                           <li><a href="#" title="">Language</a></li>
                           <li><a href="#" title="">Copyright Policy</a></li>
                       </ul>
-                      <div class="cp-sec">
+                      <div className="cp-sec">
                           <img src="../public/Assets/images/logo2.png" alt=""/>
                           <p><img src="../public/Assets/images/cp.png" alt=""/>Copyright 2018 </p>
                       </div>
                   </div>
               </div>
           </div>
-          <div class="col-lg-6 col-md-8 no-pd">
-              <div class="main-ws-sec">
-                  <div class="post-topbar">
-                      <div class="user-picy">
+          <div className="col-lg-6 col-md-8 no-pd">
+              <div className="main-ws-sec">
+                  <div className="post-topbar">
+                      <div className="user-picy">
                           <img src="../public/Assets/http://via.placeholder.com/100x100" alt=""/>
                       </div>
-                      <div class="post-st">
+                      <div className="post-st">
                           <ul>
                             
-                              <li><a class="post-jb active" href="#" title="">Post a Job</a></li>
+                              <li><a className="post-jb active" href="#" title="">Post a Job</a></li>
                           </ul>
                       </div>
                   </div>
-                  <div class="posts-section">
+                  <div className="posts-section">
                    
                         <PostView />
                       
@@ -142,170 +142,170 @@ function Body() {
                         <PostView />
                   
                         <PostView />
-                      <div class="process-comm">
-                          <div class="spinner">
-                              <div class="bounce1"></div>
-                              <div class="bounce2"></div>
-                              <div class="bounce3"></div>
+                      <div className="process-comm">
+                          <div className="spinner">
+                              <div className="bounce1"></div>
+                              <div className="bounce2"></div>
+                              <div className="bounce3"></div>
                           </div>
                       </div>
                   </div>
               </div>
           </div>
-          <div class="col-lg-3 pd-right-none no-pd">
-              <div class="right-sidebar">
-                  <div class="widget widget-about">
+          <div className="col-lg-3 pd-right-none no-pd">
+              <div className="right-sidebar">
+                  <div className="widget widget-about">
                       <img src="../public/Assets/images/wd-logo.png" alt=""/>
                       <h3>Track Time on Workwise</h3>
                       <span>Pay only for the Hours worked</span>
-                      <div class="sign_link">
+                      <div className="sign_link">
                           <h3><a href="#" title="">Sign up</a></h3>
                           <a href="#" title="">Learn More</a>
                       </div>
                   </div>
-                  <div class="widget widget-jobs">
-                      <div class="sd-title">
+                  <div className="widget widget-jobs">
+                      <div className="sd-title">
                           <h3>Top Jobs</h3>
-                          <i class="la la-ellipsis-v"></i>
+                          <i className="la la-ellipsis-v"></i>
                       </div>
-                      <div class="jobs-list">
-                          <div class="job-info">
-                              <div class="job-details">
+                      <div className="jobs-list">
+                          <div className="job-info">
+                              <div className="job-details">
                                   <h3>Senior Product Designer</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
                               </div>
-                              <div class="hr-rate">
+                              <div className="hr-rate">
                                   <span>$25/hr</span>
                               </div>
                           </div>
-                          <div class="job-info">
-                              <div class="job-details">
+                          <div className="job-info">
+                              <div className="job-details">
                                   <h3>Senior UI / UX Designer</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
                               </div>
-                              <div class="hr-rate">
+                              <div className="hr-rate">
                                   <span>$25/hr</span>
                               </div>
                           </div>
-                          <div class="job-info">
-                              <div class="job-details">
+                          <div className="job-info">
+                              <div className="job-details">
                                   <h3>Junior Seo Designer</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
                               </div>
-                              <div class="hr-rate">
+                              <div className="hr-rate">
                                   <span>$25/hr</span>
                               </div>
                           </div>
-                          <div class="job-info">
-                              <div class="job-details">
+                          <div className="job-info">
+                              <div className="job-details">
                                   <h3>Senior PHP Designer</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
                               </div>
-                              <div class="hr-rate">
+                              <div className="hr-rate">
                                   <span>$25/hr</span>
                               </div>
                           </div>
-                          <div class="job-info">
-                              <div class="job-details">
+                          <div className="job-info">
+                              <div className="job-details">
                                   <h3>Senior Developer Designer</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
                               </div>
-                              <div class="hr-rate">
+                              <div className="hr-rate">
                                   <span>$25/hr</span>
                               </div>
                           </div>
                       </div>
                   </div>
-                  <div class="widget widget-jobs">
-                      <div class="sd-title">
+                  <div className="widget widget-jobs">
+                      <div className="sd-title">
                           <h3>Most Viewed This Week</h3>
-                          <i class="la la-ellipsis-v"></i>
+                          <i className="la la-ellipsis-v"></i>
                       </div>
-                      <div class="jobs-list">
-                          <div class="job-info">
-                              <div class="job-details">
+                      <div className="jobs-list">
+                          <div className="job-info">
+                              <div className="job-details">
                                   <h3>Senior Product Designer</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
                               </div>
-                              <div class="hr-rate">
+                              <div className="hr-rate">
                                   <span>$25/hr</span>
                               </div>
                           </div>
-                          <div class="job-info">
-                              <div class="job-details">
+                          <div className="job-info">
+                              <div className="job-details">
                                   <h3>Senior UI / UX Designer</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
                               </div>
-                              <div class="hr-rate">
+                              <div className="hr-rate">
                                   <span>$25/hr</span>
                               </div>
                           </div>
-                          <div class="job-info">
-                              <div class="job-details">
+                          <div className="job-info">
+                              <div className="job-details">
                                   <h3>Junior Seo Designer</h3>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
                               </div>
-                              <div class="hr-rate">
+                              <div className="hr-rate">
                                   <span>$25/hr</span>
                               </div>
                           </div>
                       </div>
                   </div>
-                  <div class="widget suggestions full-width">
-                      <div class="sd-title">
+                  <div className="widget suggestions full-width">
+                      <div className="sd-title">
                           <h3>Most Viewed People</h3>
-                          <i class="la la-ellipsis-v"></i>
+                          <i className="la la-ellipsis-v"></i>
                       </div>
-                      <div class="suggestions-list">
-                          <div class="suggestion-usd">
+                      <div className="suggestions-list">
+                          <div className="suggestion-usd">
                               <img src="http://via.placeholder.com/35x35" alt=""/>
-                              <div class="sgt-text">
+                              <div className="sgt-text">
                                   <h4>Jessica William</h4>
                                   <span>Graphic Designer</span>
                               </div>
-                              <span><i class="la la-plus"></i></span>
+                              <span><i className="la la-plus"></i></span>
                           </div>
-                          <div class="suggestion-usd">
+                          <div className="suggestion-usd">
                               <img src="http://via.placeholder.com/35x35" alt=""/>
-                              <div class="sgt-text">
+                              <div className="sgt-text">
                                   <h4>John Doe</h4>
                                   <span>PHP Developer</span>
                               </div>
-                              <span><i class="la la-plus"></i></span>
+                              <span><i className="la la-plus"></i></span>
                           </div>
-                          <div class="suggestion-usd">
+                          <div className="suggestion-usd">
                               <img src="http://via.placeholder.com/35x35" alt=""/>
-                              <div class="sgt-text">
+                              <div className="sgt-text">
                                   <h4>Poonam</h4>
                                   <span>Wordpress Developer</span>
                               </div>
-                              <span><i class="la la-plus"></i></span>
+                              <span><i className="la la-plus"></i></span>
                           </div>
-                          <div class="suggestion-usd">
+                          <div className="suggestion-usd">
                               <img src="http://via.placeholder.com/35x35" alt=""/>
-                              <div class="sgt-text">
+                              <div className="sgt-text">
                                   <h4>Bill Gates</h4>
                                   <span>C &amp; C++ Developer</span>
                               </div>
-                              <span><i class="la la-plus"></i></span>
+                              <span><i className="la la-plus"></i></span>
                           </div>
-                          <div class="suggestion-usd">
+                          <div className="suggestion-usd">
                               <img src="http://via.placeholder.com/35x35" alt=""/>
-                              <div class="sgt-text">
+                              <div className="sgt-text">
                                   <h4>Jessica William</h4>
                                   <span>Graphic Designer</span>
                               </div>
-                              <span><i class="la la-plus"></i></span>
+                              <span><i className="la la-plus"></i></span>
                           </div>
-                          <div class="suggestion-usd">
+                          <div className="suggestion-usd">
                               <img src="http://via.placeholder.com/35x35" alt=""/>
-                              <div class="sgt-text">
+                              <div className="sgt-text">
                                   <h4>John Doe</h4>
                                   <span>PHP Developer</span>
                               </div>
-                              <span><i class="la la-plus"></i></span>
+                              <span><i className="la la-plus"></i></span>
                           </div>
-                          <div class="view-more">
+                          <div className="view-more">
                               <a href="#" title="">View More</a>
                           </div>
                       </div>
@@ -322,26 +322,26 @@ function Body() {
 
 
 
-<div class="post-popup job_post">
-<div class="post-project">
+<div className="post-popup job_post">
+<div className="post-project">
 <h3>Post</h3>
-<div class="post-project-fields">
+<div className="post-project-fields">
   <form>
-      <div class="row">
+      <div className="row">
 
-          <div class="col-lg-12">
+          <div className="col-lg-12">
               <textarea name="description" placeholder="Description"></textarea>
           </div>
-          <div class="col-lg-12">
+          <div className="col-lg-12">
               <ul>
-                  <li><button class="active" type="submit" value="post">Post</button></li>
+                  <li><button className="active" type="submit" value="post">Post</button></li>
                 
               </ul>
           </div>
       </div>
   </form>
 </div>
-<a href="#" title=""><i class="la la-times-circle-o"></i></a>
+<a href="#" title=""><i className="la la-times-circle-o"></i></a>
 </div>
 </div>
 

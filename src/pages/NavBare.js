@@ -4,15 +4,15 @@ import {Link} from "react-router-dom";
 function NavBare() {
           return (
             <header>
-            <div class="container">
-            <div class="header-data">
-              <div class="logo">
+            <div className="container">
+            <div className="header-data">
+              <div className="logo">
                   <a href="index.html" title=""><img src="Assets/images/logo.png" alt=""/></a>
               </div>
-              <div class="search-bar">
+              <div className="search-bar">
                   <form>
                       <input type="text" name="search" placeholder="Search..."/>
-                      <button type="submit"><i class="la la-search"></i></button>
+                      <button type="submit"><i className="la la-search"></i></button>
                   </form>
               </div>
               <nav>
@@ -38,24 +38,24 @@ function NavBare() {
                       </Link>
                   </ul>
               </nav>
-              <div class="menu-btn">
-                  <a href="#" title=""><i class="fa fa-bars"></i></a>
+              <div className="menu-btn">
+                  <a href="#" title=""><i className="fa fa-bars"></i></a>
               </div>
-              <div class="user-account">
-                  <div class="user-info">
+              <div className="user-account">
+                  <div className="user-info">
                       <img src="http://via.placeholder.com/30x30" alt=""/>
                       <a href="#" title="">John</a>
-                      <i class="la la-sort-down"></i>
+                      <i className="la la-sort-down"></i>
                   </div>
-                  <div class="user-account-settingss">
+                  <div className="user-account-settingss">
                       
                       <h3>Setting</h3>
-                      <ul class="us-links">
+                      <ul className="us-links">
                           <li><a  title="">Account Setting</a></li>
                           <li><a title="">Privacy</a></li>
                           <li><a  title="">Terms & Conditions</a></li>
                       </ul>
-                      <h3 class="tc"><a href="sign-in.html" title="">Logout</a></h3>
+                      <h3 className="tc"><a href="sign-in.html" title="">Logout</a></h3>
                   </div>
               </div>
             </div>
