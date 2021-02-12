@@ -3,10 +3,63 @@ import React from "react";
 import {Link} from "react-router-dom";
 import PostView from "./PostView";
 
-function Body() {
+var username = React.createRef();
+var name = React.createRef();
 
+ function loadinfo() {
+    let url = 'http://localhost:8080/ChatWeb-1/User/infoUser';
+    // Les données du POST
+    let data = {
+        token: localStorage.getItem("logintoken")
+    };
+    // Les options de la requete
+    let options = {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: new URLSearchParams(data)
+    };
+
+    fetch(url, options)
+        .then(function(response) { return response.json(); })
+        .then(function(json) {
+            username.current.innerHTML = json.username;
+            name.current.innerHTML = json.name;
+        });
+ }
+
+
+
+function Body() {
+            loadinfo();
+    var postdesc = React.createRef();
+     function newpost() {
+         if(postdesc.current.value!='')
+         {
+             let url = 'http://localhost:8080/ChatWeb-1/User/CreatPost';
+             // Les données du POST
+             let data = {
+                 token: localStorage.getItem("logintoken"),
+                 text: postdesc.current.value
+             };
+             // Les options de la requete
+             let options = {
+                 method: 'POST',
+                 headers: {
+                     "Content-Type": "application/x-www-form-urlencoded"
+                 },
+                 body: new URLSearchParams(data)
+             };
+             fetch(url, options).then(function() {
+                 document.getElementsByClassName('post-popup job_post')[0].classList.remove("active");
+                 document.getElementById('root').classList.remove("wrapper");
+                 document.getElementById('root').classList.remove("overlay");
+                 postdesc.current.value = '';
+             }  )
+         }
+     }
           return (
-              
             <div>
 <main>
 <div className="main-section">
@@ -23,8 +76,8 @@ function Body() {
                               </div>
                           </div>
                           <div className="user-specs">
-                              <h3>John Doe</h3>
-                              <span>Graphic Designer at Self Employed</span>
+                              <h3 ref={username}></h3>
+                              <span ref={name}></span>
                           </div>
                       </div>
                       <ul className="user-fw-status">
@@ -36,11 +89,11 @@ function Body() {
                               <h4>Followers</h4>
                               <span>155</span>
                           </li>
-                          <Link to='/MyProfile'>
                           <li>
-                              <a  title="">View Profile</a>
-                          </li>
+                          <Link to='/MyProfile'>
+                            View Profile
                           </Link>
+                          </li>
                       </ul>
                   </div>
                   <div className="suggestions full-width">
@@ -114,8 +167,8 @@ function Body() {
                           <li><a href="#" title="">Copyright Policy</a></li>
                       </ul>
                       <div className="cp-sec">
-                          <img src="../public/Assets/images/logo2.png" alt=""/>
-                          <p><img src="../public/Assets/images/cp.png" alt=""/>Copyright 2018 </p>
+                          <img src="Assets/images/logo2.png" alt=""/>
+                          <p><img src="Assets/images/cp.png" alt=""/>Copyright 2018 </p>
                       </div>
                   </div>
               </div>
@@ -124,7 +177,7 @@ function Body() {
               <div className="main-ws-sec">
                   <div className="post-topbar">
                       <div className="user-picy">
-                          <img src="../public/Assets/http://via.placeholder.com/100x100" alt=""/>
+                          <img src="Assets/http://via.placeholder.com/100x100" alt=""/>
                       </div>
                       <div className="post-st">
                           <ul>
@@ -137,11 +190,7 @@ function Body() {
                    
                         <PostView />
                       
-                        <PostView />
-                   
-                        <PostView />
-                  
-                        <PostView />
+
                       <div className="process-comm">
                           <div className="spinner">
                               <div className="bounce1"></div>
@@ -155,7 +204,7 @@ function Body() {
           <div className="col-lg-3 pd-right-none no-pd">
               <div className="right-sidebar">
                   <div className="widget widget-about">
-                      <img src="../public/Assets/images/wd-logo.png" alt=""/>
+                      <img src="Assets/images/wd-logo.png" alt=""/>
                       <h3>Track Time on Workwise</h3>
                       <span>Pay only for the Hours worked</span>
                       <div className="sign_link">
@@ -330,12 +379,11 @@ function Body() {
       <div className="row">
 
           <div className="col-lg-12">
-              <textarea name="description" placeholder="Description"></textarea>
+              <textarea name="description" ref={postdesc} placeholder="Description"></textarea>
           </div>
           <div className="col-lg-12">
               <ul>
-                  <li><button className="active" type="submit" value="post">Post</button></li>
-                
+                  <li><button className="active" id="postnews" onClick={newpost} type="button" value="post">Post</button></li>
               </ul>
           </div>
       </div>

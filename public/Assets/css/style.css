@@ -74,8 +74,9 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 	overflow-x: hidden;
 	font-weight: 400;
-	background-color: #eeeeee;
+	background-color: #e75348;
 }
+
 ol, ul {
 	list-style: none;
 }
@@ -699,6 +700,7 @@ main {
 	float: left;
 	width: 100%;
 	padding: 60px 0;
+	background-color: #eeeeee;
 }
 .main-section {
 	float: left;

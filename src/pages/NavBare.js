@@ -2,12 +2,31 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 function NavBare() {
-          return (
+    function logout() {
+        let url = 'http://localhost:8080/ChatWeb-1/User/logout';
+        // Les données du POST
+        let data = {
+            token: localStorage.getItem("logintoken")
+        };
+        // Les options de la requete
+        let options = {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: new URLSearchParams(data)
+        };
+        fetch(url, options)
+        localStorage.removeItem("logintoken");
+        window.location.reload();
+    }
+
+    return (
             <header>
             <div className="container">
             <div className="header-data">
               <div className="logo">
-                  <a href="index.html" title=""><img src="Assets/images/logo.png" alt=""/></a>
+                  <a  title=""><img src="Assets/images/logo.png" alt=""/></a>
               </div>
               <div className="search-bar">
                   <form>
@@ -17,25 +36,19 @@ function NavBare() {
               </div>
               <nav>
                   <ul>
-                      <Link to='/'>
                       <li>
-
-                          <a title="">
+                          <Link to='/'>
                               <span><img src="Assets/images/icon1.png" alt=""/></span>
                               Home
-                          </a>
+                          </Link>
                       </li>
-                      </Link>
-                      
-                      <Link to='/MyProfile'>
+
                       <li>
-                          <a  title="">
+                      <Link to='/MyProfile'>
                               <span><img src="Assets/images/icon4.png" alt=""/></span>
                               Profiles
-                          </a>
-                         
-                      </li>
                       </Link>
+                      </li>
                   </ul>
               </nav>
               <div className="menu-btn">
@@ -55,7 +68,7 @@ function NavBare() {
                           <li><a title="">Privacy</a></li>
                           <li><a  title="">Terms & Conditions</a></li>
                       </ul>
-                      <h3 className="tc"><a href="sign-in.html" title="">Logout</a></h3>
+                      <h3 className="tc"><a href={""} onClick={logout} title="">Logout</a></h3>
                   </div>
               </div>
             </div>

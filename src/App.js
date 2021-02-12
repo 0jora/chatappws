@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { BrowserRouter as Router,
   Route,
   Switch,
-  Links, 
-  Redirect 
+  Links,
+  Redirect
   } from "react-router-dom";
 
 //pages
@@ -12,30 +12,28 @@ import Body from './pages/Body';
 import MyProfile from './pages/MyProfile';
 import LoginPage from './pages/LoginPage';
 function App() {
-  return (
-  
-      <div className="App">
-    
-   
-      <Router>
-      
-      <Switch>
-    <Route exact path="/LoginPage" component = {LoginPage} />
-    <NavBare/>
 
-    </Switch>
-       
-        <Route exact path="/" component = {Body} />
-        <Route exact path="/MyProfile" component = {MyProfile} />
-      
+    if ("logintoken" in localStorage) {
+        return (
+            <div className="App">
+                <Router>
+                    <NavBare/>
+                    <Route exact path="/" component = {Body} />
+                    <Route exact path="/MyProfile" component = {MyProfile} />
+                </Router>
+            </div>
+        )
+    } else {
+        return (
+            <div className="App">
+                <Router>
+                        <Route exact path="/" component = {LoginPage} />
+                </Router>
+            </div>
 
-      </Router>
-      
-    
+        )
+    }
 
-      </div>
-
-  )
 }
 
 export default App;
