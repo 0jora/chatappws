@@ -77,7 +77,7 @@ function LoginPage() {
 													<div className="row">
 														<div className="col-lg-12 no-pdd">
 															<div className="sn-field">
-																<input type="text" ref={loginemail} placeholder="Username"/>
+																<input type="text" ref={loginemail} placeholder="email"/>
 																<i className="la la-user"></i>
 															</div>
 														</div>
@@ -120,23 +120,24 @@ function LoginPage() {
 															<div className="col-lg-12 no-pdd">
 																<div className="sn-field">
 																	<input type="text" name="UserName" placeholder="UserName"/>
-																	<i className="la la-globe"></i>
+																	<i className="la la-user"></i>
 																</div>
 															</div>
 															<div className="col-lg-12 no-pdd">
 																<div className="sn-field">
-																	<input type="text" name="Birthday" placeholder="Birthday"/>
-																	<i className="la la-globe"></i>
+																	<input type="date"/>
+																
 																</div>
 															</div>
 															<div className="col-lg-12 no-pdd">
 																<div className="sn-field">
 																	<select>
+																	   <option value="">Gender</option>
 																		<option>Man</option>
 																		<option>Woman</option>
 																		<option>Other</option>
 																	</select>
-																	<i className="la la-dropbox"></i>
+																	<i className="la la-question-circle"></i>
 																	<span><i className="fa fa-ellipsis-h"></i></span>
 																</div>
 															</div>
