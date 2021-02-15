@@ -1,7 +1,36 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 import Comments from "./Comments";
-function PostView() {
+function PostView(props) {
+    const [date , setNews] = useState();
+
+    useEffect(() => {
+        let diff =Math.abs(new Date().getTime() - props.date ) / 1000;
+
+        var findate = "il y'a ";
+
+        let days = Math.floor(diff / 86400);
+        if(days!=0)
+            findate += days+" jour ";
+
+        let hours = Math.floor(diff / 3600) % 24;
+        if(hours!=0)
+            findate += hours+" heures ";
+
+        let minutes = Math.floor(diff / 60) % 60;
+        if(minutes!=0)
+            findate += minutes+" minute ";
+
+        let sec = Math.floor(diff  % 60);
+        if(sec!=0)
+            findate += sec+" sec ";
+
+
+        setNews(findate)
+    },[]);
+
+
+
           return (
               
 <div className="posty">
@@ -10,16 +39,9 @@ function PostView() {
         <div className="usy-dt">
             <img src="http://via.placeholder.com/50x50" alt=""/>
             <div className="usy-name">
-                <h3>John Doe</h3>
-                <span><img src="../public/Assets/images/clock.png" alt=""/>3 min ago</span>
+                <h3>{props.poster}</h3>
+                <span><img src="../public/Assets/images/clock.png" alt=""/>{ date }</span>
             </div>
-        </div>
-        <div className="ed-opts">
-           
-            <ul className="bk-links">
-               <li><a href="#" title=""><i className="la la-plus-circle"></i></a></li>
-               
-            </ul>
         </div>
     </div>
     <div className="epi-sec">
@@ -28,11 +50,7 @@ function PostView() {
     </div>
     <div className="job_descp">
        
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet...
-        orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet
-        orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet
-        orem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet
-        </p>
+        <p>{props.text}</p>
      
     </div>
     <div className="job-status-bar">
@@ -44,10 +62,9 @@ function PostView() {
             </li> 
             <li><a href="#" title="" className="com"><img src="Assets/images/com.png" alt=""/> Comment 15</a></li>
         </ul>
-        <a><i className="la la-eye"></i>Views 50</a>
     </div>
 </div>
-<Comments />
+    <Comments comments={props.comments} />
 </div>
           )
 }

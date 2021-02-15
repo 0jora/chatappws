@@ -1,7 +1,8 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
+var SeaInp = React.createRef();
+function NavBare(props) {
 
-function NavBare() {
     function logout() {
         let url = 'http://localhost:8080/ChatWeb-1/User/logout';
         // Les données du POST
@@ -20,7 +21,10 @@ function NavBare() {
         localStorage.removeItem("logintoken");
         window.location.reload();
     }
-
+    const history = useHistory();
+    function search() {
+        history.push('/Search/'+SeaInp.current.value);
+    }
     return (
             <header>
             <div className="container">
@@ -30,8 +34,8 @@ function NavBare() {
               </div>
               <div className="search-bar">
                   <form>
-                      <input type="text" name="search" placeholder="Search..."/>
-                      <button type="submit"><i className="la la-search"></i></button>
+                       <input type="text" ref={SeaInp}  placeholder="Search..."/>
+                       <button type="button"> <Link to="#" onClick={search} ><i className="la la-search"></i> </Link></button>
                   </form>
               </div>
               <nav>

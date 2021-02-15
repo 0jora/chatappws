@@ -1,12 +1,12 @@
 
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 import PostView from "./PostView";
+import SearchRes from "./SearchRes";
 
-var username = React.createRef();
-var name = React.createRef();
 
- function loadinfo() {
+var postdesc = React.createRef();
+async function loadinfo() {
     let url = 'http://localhost:8080/ChatWeb-1/User/infoUser';
     // Les données du POST
     let data = {
@@ -21,19 +21,56 @@ var name = React.createRef();
         body: new URLSearchParams(data)
     };
 
-    fetch(url, options)
-        .then(function(response) { return response.json(); })
-        .then(function(json) {
-            username.current.innerHTML = json.username;
-            name.current.innerHTML = json.name;
-        });
+
+
+
+    const res = await fetch(url, options);
+    const resoluts = await res.json();
+
+
+
+
+    return resoluts;
  }
 
 
 
 function Body() {
-            loadinfo();
-    var postdesc = React.createRef();
+    const [data, setData] = useState({username:"loading...",name:"loading..."});
+    const [news , setNews] = useState([]);
+    useEffect(async () => {
+        const result = await loadinfo();
+        setData(result);
+    },[]);
+    useEffect(() => {
+        fetchNew()
+    },[]);
+
+    const fetchNew = () => {
+        let url = 'http://localhost:8080/ChatWeb-1/User/getNews';
+        // Les données du POST
+        let data = {
+            token: localStorage.getItem("logintoken")
+        };
+        // Les options de la requete
+        let options = {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: new URLSearchParams(data)
+        };
+        fetch(url, options).then(function(response) { return response.json(); })
+            .then(function(res) {
+                let code = res.msg;
+                if(code==0){
+                    console.log(res.result)
+                    setNews(res.result)
+                }else if(code==1)
+                    console.log("no news founded")
+            });
+    }
+
      function newpost() {
          if(postdesc.current.value!='')
          {
@@ -56,7 +93,8 @@ function Body() {
                  document.getElementById('root').classList.remove("wrapper");
                  document.getElementById('root').classList.remove("overlay");
                  postdesc.current.value = '';
-             }  )
+
+             });
          }
      }
           return (
@@ -76,8 +114,8 @@ function Body() {
                               </div>
                           </div>
                           <div className="user-specs">
-                              <h3 ref={username}></h3>
-                              <span ref={name}></span>
+                                      <h3 > {data.username} </h3>
+                                  <span >{data.name}</span>
                           </div>
                       </div>
                       <ul className="user-fw-status">
@@ -182,20 +220,19 @@ function Body() {
                       <div className="post-st">
                           <ul>
                             
-                              <li><a className="post-jb active" href="#" title="">Post a Job</a></li>
+                              <li><Link className="post-jb active" to="" title="">Post a Job</Link></li>
                           </ul>
                       </div>
                   </div>
                   <div className="posts-section">
-                   
-                        <PostView />
-                      
-
+                      {news.map(item =>
+                          <PostView Key = {item.id} comments={item.comments} date={item.date} id={item.id} poster={item.poster} dislike={item.dislike} like={item.like} text={item.text} ></PostView>
+                      )}
                       <div className="process-comm">
                           <div className="spinner">
-                              <div className="bounce1"></div>
-                              <div className="bounce2"></div>
-                              <div className="bounce3"></div>
+                              <div className="bounce1"/>
+                              <div className="bounce2"/>
+                              <div className="bounce3"/>
                           </div>
                       </div>
                   </div>
